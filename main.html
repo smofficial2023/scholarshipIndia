@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarshipIndia - Find Your Perfect Scholarship</title>
+    <link rel="stylesheet" href="mainstyles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>ScholarshipIndia</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#scholarships" class="nav-link">Scholarships</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Find Your Perfect Scholarship</h1>
+            <p class="hero-subtitle">Discover thousands of scholarships from government and private organizations across India</p>
+            <div class="hero-search">
+                <div class="search-container">
+                    <input type="text" id="hero-search" placeholder="Search scholarships by name, category, or state...">
+                    <button type="button" id="hero-search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="15000">0</span>
+                    <span class="stat-label">Scholarships</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50000">0</span>
+                    <span class="stat-label">Students Helped</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-label">Crores Distributed</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <h2>Filter Scholarships</h2>
+            <div class="filter-grid">
+                <div class="filter-group">
+                    <label for="category-filter">Category</label>
+                    <select id="category-filter">
+                        <option value="">All Categories</option>
+                        <option value="merit">Merit Based</option>
+                        <option value="need">Need Based</option>
+                        <option value="minority">Minority</option>
+                        <option value="sc-st">SC/ST</option>
+                        <option value="obc">OBC</option>
+                        <option value="pwd">PWD</option>
+                        <option value="girl-child">Girl Child</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="type-filter">Type</label>
+                    <select id="type-filter">
+                        <option value="">All Types</option>
+                        <option value="government">Government</option>
+                        <option value="private">Private</option>
+                        <option value="international">International</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="level-filter">Education Level</label>
+                    <select id="level-filter">
+                        <option value="">All Levels</option>
+                        <option value="school">School</option>
+                        <option value="undergraduate">Undergraduate</option>
+                        <option value="postgraduate">Postgraduate</option>
+                        <option value="phd">PhD</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="state-filter">State</label>
+                    <select id="state-filter">
+                        <option value="">All States</option>
+                        <option value="maharashtra">Maharashtra</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="karnataka">Karnataka</option>
+                        <option value="tamil-nadu">Tamil Nadu</option>
+                        <option value="west-bengal">West Bengal</option>
+                        <option value="gujarat">Gujarat</option>
+                        <option value="rajasthan">Rajasthan</option>
+                        <option value="uttar-pradesh">Uttar Pradesh</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scholarships Section -->
+    <section id="scholarships" class="scholarships-section">
+        <div class="container">
+            <h2>Available Scholarships</h2>
+            <div class="scholarships-grid" id="scholarships-grid">
+                <!-- Scholarship cards will be dynamically inserted here -->
+            </div>
+            <div class="load-more-container">
+                <button id="load-more-btn" class="btn-primary">Load More Scholarships</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About ScholarshipIndia</h2>
+                    <p>ScholarshipIndia is India's largest unified platform for accessing scholarships from both governmental and non-governmental organizations. We bridge the gap between deserving students and available financial aid opportunities.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-search"></i>
+                            <div>
+                                <h3>Easy Search</h3>
+                                <p>Find scholarships with our advanced search and filter system</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h3>Verified Information</h3>
+                                <p>All scholarship information is verified and regularly updated</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-bell"></i>
+                            <div>
+                                <h3>Real-time Updates</h3>
+                                <p>Get notified about new scholarships and application deadlines</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>support@scholarshipindia.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+91-1800-123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>123 Education Hub, New Delhi, India</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>ScholarshipIndia</span>
+                    </div>
+                    <p>Empowering students across India with access to quality education through scholarships.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#scholarships">Scholarships</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Merit Based</a></li>
+                        <li><a href="#">Need Based</a></li>
+                        <li><a href="#">Minority Scholarships</a></li>
+                        <li><a href="#">Girl Child Education</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ScholarshipIndia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scholarship Modal -->
+    <div id="scholarship-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- Modal content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
